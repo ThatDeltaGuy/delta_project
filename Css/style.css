@@ -1,0 +1,180 @@
+/* line 1, E:/Git/Side Projects/intranet/css/sass/style.scss */
+body {
+  min-height: 100vh;
+}
+
+/* line 3, E:/Git/Side Projects/intranet/css/sass/style.scss */
+body main {
+  background: gray;
+  min-height: 100vh;
+}
+
+/* line 9, E:/Git/Side Projects/intranet/css/sass/style.scss */
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+/* line 1, E:/Git/Side Projects/intranet/css/sass/_login.scss */
+.login {
+  background: url("/img/300z-grad-slide.jpg");
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* line 8, E:/Git/Side Projects/intranet/css/sass/_login.scss */
+.login .login-form {
+  width: 30vw;
+  background-color: #fff;
+  padding: 50px;
+  text-align: center;
+}
+
+/* line 13, E:/Git/Side Projects/intranet/css/sass/_login.scss */
+.login .login-form img {
+  width: 50%;
+  max-width: 100%;
+  min-width: 300px;
+  margin: auto;
+}
+
+/* line 19, E:/Git/Side Projects/intranet/css/sass/_login.scss */
+.login .login-form h1 {
+  text-align: center;
+  font-size: 24px;
+}
+
+/* line 24, E:/Git/Side Projects/intranet/css/sass/_login.scss */
+.login .login-form form label {
+  float: left;
+}
+
+/* line 27, E:/Git/Side Projects/intranet/css/sass/_login.scss */
+.login .login-form form input {
+  width: 100%;
+}
+
+/* line 30, E:/Git/Side Projects/intranet/css/sass/_login.scss */
+.login .login-form form .field-validation-error {
+  color: red;
+}
+
+/* line 34, E:/Git/Side Projects/intranet/css/sass/_login.scss */
+.login .login-form form .validation-summary-errors ul {
+  list-style: none;
+  padding: 0;
+  color: red;
+}
+
+/* line 40, E:/Git/Side Projects/intranet/css/sass/_login.scss */
+.login .login-form form button {
+  background-color: #0059FF;
+  color: #fff;
+  float: left;
+  cursor: pointer;
+}
+
+/* line 1, E:/Git/Side Projects/intranet/css/sass/_nav-bar.scss */
+nav {
+  position: fixed;
+  width: 100%;
+  z-index: 300;
+}
+
+/* line 5, E:/Git/Side Projects/intranet/css/sass/_nav-bar.scss */
+nav .top-bar {
+  position: relative;
+  text-align: center;
+  display: flex;
+  height: 100px;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0px 2px 4px 2px rgba(0, 0, 0, 0.5);
+  z-index: 300;
+  background-color: #fff;
+}
+
+/* line 15, E:/Git/Side Projects/intranet/css/sass/_nav-bar.scss */
+nav .top-bar img {
+  max-width: 300px;
+}
+
+/* line 24, E:/Git/Side Projects/intranet/css/sass/_nav-bar.scss */
+nav .top-bar .left-button, nav .top-bar .right-button {
+  padding: 5px 20px;
+  font-size: 24px;
+  background-color: #0059FF;
+  border-radius: 5px;
+  color: #fff;
+  margin: 0 20px;
+  cursor: pointer;
+}
+
+/* line 34, E:/Git/Side Projects/intranet/css/sass/_nav-bar.scss */
+nav .directory {
+  left: -400px;
+  box-shadow: 3px 3px 4px 1px rgba(0, 0, 0, 0.5);
+}
+
+/* line 36, E:/Git/Side Projects/intranet/css/sass/_nav-bar.scss */
+nav .directory.active {
+  left: 0;
+  transition: .3s;
+}
+
+/* line 41, E:/Git/Side Projects/intranet/css/sass/_nav-bar.scss */
+nav .directory .directory-list {
+  padding: 20px;
+}
+
+/* line 45, E:/Git/Side Projects/intranet/css/sass/_nav-bar.scss */
+nav .menu {
+  right: -400px;
+  box-shadow: -3px 3px 4px 1px rgba(0, 0, 0, 0.5);
+}
+
+/* line 47, E:/Git/Side Projects/intranet/css/sass/_nav-bar.scss */
+nav .menu.active {
+  right: 0;
+  transition: .3s;
+}
+
+/* line 52, E:/Git/Side Projects/intranet/css/sass/_nav-bar.scss */
+nav .menu .logout {
+  text-align: center;
+  padding: 20px;
+  position: absolute;
+  bottom: 0;
+  background-color: #fff;
+  box-shadow: 0px -2px 4px 2px rgba(0, 0, 0, 0.5);
+  width: 100%;
+}
+
+/* line 60, E:/Git/Side Projects/intranet/css/sass/_nav-bar.scss */
+nav .menu .logout .form-group {
+  margin: auto;
+}
+
+/* line 63, E:/Git/Side Projects/intranet/css/sass/_nav-bar.scss */
+nav .menu .logout button {
+  background-color: #0059FF;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* line 70, E:/Git/Side Projects/intranet/css/sass/_nav-bar.scss */
+nav .directory, nav .menu {
+  width: 400px;
+  position: absolute;
+  top: 101px;
+  z-index: 200;
+  transition: .3s;
+  background: #f2f;
+  min-height: calc(100vh - 101px);
+}
+
+/*# sourceMappingURL=../style.map */

@@ -1,0 +1,65 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage<ContentModels.Master>
+@using ContentModels = Umbraco.Web.PublishedContentModels;
+@using umbraco.MacroEngines;
+@{
+	Layout = null;
+	 var loginStatusModel = Members.GetCurrentLoginStatus();
+}
+@if(!loginStatusModel.IsLoggedIn){
+	    Response.Redirect("/login");
+	}
+else{
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/Article">
+
+<head>
+
+<!-- SEO Time -->
+<title>Intranet | @CurrentPage.Name</title>
+<meta http-equiv="Expires" content="30" />
+<meta name="description" content="" />
+<meta name="keywords" content="">
+
+<!--Other Meta-->
+  <meta charset="utf-8">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+  <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+
+  <!-- Stylesheets-->
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <!--[if lt IE 10]>
+    <div style="background: #212121; padding: 10px 0; box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3); clear: both; text-align:center; position: relative; z-index:1;"><a href="http://windows.microsoft.com/en-US/internet-explorer/"><img src="images/ie8-panel/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a></div>
+    <script src="js/html5shiv.min.js"></script>
+  <![endif]-->
+		
+</head>
+
+<body>
+
+  <!-- Page Head-->
+  <header>
+    @Html.Partial("nav-bar")
+  </header>
+  <!-- Page Contents-->
+  <main class="page-content">
+      @RenderBody()
+  </main>
+
+  <!-- Page Footer-->
+  <footer>
+
+  </footer>
+  <!-- Java script-->
+  <script src="/Scripts/jquery-2.2.4.min.js"></script>
+  <script src="/Scripts/bootstrap.min.js"></script>
+  <script src="/Scripts/main.js"></script>
+  <script src="https://www.activewin.co.uk/api/poweredby.js"></script>
+
+</body>
+
+</html>
+}

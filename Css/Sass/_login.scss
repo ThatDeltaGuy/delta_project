@@ -1,0 +1,48 @@
+.login{
+    background:url('/img/300z-grad-slide.jpg');
+    background-size:cover;
+    height:100vh;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    .login-form{
+        width:30vw;
+        background-color:#fff;
+        padding:50px;
+        text-align:center;
+        img{
+            width:50%;
+            max-width:100%;
+            min-width:300px;
+            margin:auto;
+        }
+        h1{
+            text-align:center;
+            font-size:24px;
+        }
+        form{
+            label{
+                float:left;
+            }
+            input{
+                width:100%;
+            }
+            .field-validation-error{
+                color:red;
+            }
+            .validation-summary-errors{
+                ul{
+                    list-style: none;
+                    padding:0;
+                    color:red;
+                }
+            }
+            button{
+                background-color:#0059FF;
+                color:#fff;
+                float:left;
+                cursor: pointer;
+            }
+        }
+    }
+}

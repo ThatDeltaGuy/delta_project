@@ -1,0 +1,15 @@
+body{
+    min-height:100vh;
+    main{
+        background:gray;
+        min-height:100vh;
+    }
+}
+
+footer{
+    position: fixed;
+    bottom:0;
+    width:100%;
+}
+@import "login";
+@import "nav-bar";

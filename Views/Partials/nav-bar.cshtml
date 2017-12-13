@@ -1,0 +1,45 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@using Umbraco.Web
+
+
+@{ 
+    var selection = Model.Content.Site().Children.Where(x => x.IsVisible()).ToArray(); 
+}
+
+<nav>
+    <div class="directory">
+        <div class="directory-list">
+            <ul>
+            @foreach (var member in ApplicationContext.Current.Services.MemberService.GetAllMembers())
+            {
+                string id = member.GetValue("staffPhoto").ToString();
+                var udi = Udi.Parse(id);
+                var media = Umbraco.TypedMedia(udi);
+                <li><img src="@media.Url"/> @member.Name @member.GetValue("phoneExtension")</li>
+            }
+            </ul>
+        </div>
+    </div>
+    <div class="top-bar">
+        <div class="left-button">Directory</div>
+        <img src="/img/logo.svg"/>
+        <div class="right-button">Menu</div>
+    </div>
+    <div class="menu">
+        @if (selection.Length > 0)
+        {
+            <ul>
+                @foreach (var item in selection)
+                {
+                    <li class="@(item.IsAncestorOrSelf(Model.Content) ? "current" : null)">
+                        <a href="@item.Url">@item.Name</a>
+                    </li>
+                }
+            </ul>
+            
+        }
+        <div class="logout">
+            @Html.Partial("Login Status")
+        </div>
+    </div>
+</nav>
