@@ -9,15 +9,39 @@
 <nav>
     <div class="directory">
         <div class="directory-list">
-            <ul>
+            <table>
+            <tr>
+                <th></th>
+                <th>Name</th>
+                <th>Phone</th>
+                <th>Email</th>
+              </tr>
             @foreach (var member in ApplicationContext.Current.Services.MemberService.GetAllMembers())
             {
-                string id = member.GetValue("staffPhoto").ToString();
+            string id = member.GetValue("staffPhoto").ToString();
                 var udi = Udi.Parse(id);
                 var media = Umbraco.TypedMedia(udi);
-                <li><img src="@media.Url"/> @member.Name @member.GetValue("phoneExtension")</li>
+              
+              <tr>
+                <td><img src="@media.Url"/></td>
+                <td>@member.GetValue("displayName")</td>
+                <td>@member.GetValue("phoneExtension")</td>
+                <td>@member.Email</td>
+              </tr>
+              <tr>
+                <td><img src="@media.Url"/></td>
+                <td>@member.GetValue("displayName")</td>
+                <td>@member.GetValue("phoneExtension")</td>
+                <td>@member.Email</td>
+              </tr>
+              <tr>
+                <td><img src="@media.Url"/></td>
+                <td>@member.GetValue("displayName")</td>
+                <td>@member.GetValue("phoneExtension")</td>
+                <td>@member.Email</td>
+              </tr>
             }
-            </ul>
+             </table>
         </div>
     </div>
     <div class="top-bar">

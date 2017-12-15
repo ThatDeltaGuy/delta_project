@@ -131,19 +131,47 @@ nav .directory .directory-list {
   padding: 20px;
 }
 
-/* line 45, E:/Git/Side Projects/intranet/css/sass/_nav-bar.scss */
+/* line 43, E:/Git/Side Projects/intranet/css/sass/_nav-bar.scss */
+nav .directory .directory-list img {
+  max-height: 50px;
+}
+
+/* line 46, E:/Git/Side Projects/intranet/css/sass/_nav-bar.scss */
+nav .directory .directory-list table {
+  display: table;
+  border: 1px solid #000;
+  width: 100%;
+  text-align: center;
+}
+
+/* line 55, E:/Git/Side Projects/intranet/css/sass/_nav-bar.scss */
+nav .directory .directory-list tr {
+  border: 1px solid #000;
+}
+
+/* line 57, E:/Git/Side Projects/intranet/css/sass/_nav-bar.scss */
+nav .directory .directory-list tr:hover {
+  background-color: gray;
+}
+
+/* line 60, E:/Git/Side Projects/intranet/css/sass/_nav-bar.scss */
+nav .directory .directory-list tr td {
+  border: 1px solid #000;
+}
+
+/* line 66, E:/Git/Side Projects/intranet/css/sass/_nav-bar.scss */
 nav .menu {
   right: -400px;
   box-shadow: -3px 3px 4px 1px rgba(0, 0, 0, 0.5);
 }
 
-/* line 47, E:/Git/Side Projects/intranet/css/sass/_nav-bar.scss */
+/* line 68, E:/Git/Side Projects/intranet/css/sass/_nav-bar.scss */
 nav .menu.active {
   right: 0;
   transition: .3s;
 }
 
-/* line 52, E:/Git/Side Projects/intranet/css/sass/_nav-bar.scss */
+/* line 73, E:/Git/Side Projects/intranet/css/sass/_nav-bar.scss */
 nav .menu .logout {
   text-align: center;
   padding: 20px;
@@ -154,26 +182,26 @@ nav .menu .logout {
   width: 100%;
 }
 
-/* line 60, E:/Git/Side Projects/intranet/css/sass/_nav-bar.scss */
+/* line 81, E:/Git/Side Projects/intranet/css/sass/_nav-bar.scss */
 nav .menu .logout .form-group {
   margin: auto;
 }
 
-/* line 63, E:/Git/Side Projects/intranet/css/sass/_nav-bar.scss */
+/* line 84, E:/Git/Side Projects/intranet/css/sass/_nav-bar.scss */
 nav .menu .logout button {
   background-color: #0059FF;
   color: #fff;
   cursor: pointer;
 }
 
-/* line 70, E:/Git/Side Projects/intranet/css/sass/_nav-bar.scss */
+/* line 91, E:/Git/Side Projects/intranet/css/sass/_nav-bar.scss */
 nav .directory, nav .menu {
   width: 400px;
   position: absolute;
   top: 101px;
   z-index: 200;
   transition: .3s;
-  background: #f2f;
+  background: #fff;
   min-height: calc(100vh - 101px);
 }
 

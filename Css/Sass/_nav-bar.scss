@@ -40,6 +40,27 @@ nav{
         box-shadow: 3px 3px 4px 1px rgba(0, 0, 0, 0.5);
         .directory-list{
             padding:20px;
+            img{
+                max-height:50px;
+            }
+            table {
+                display: table;
+                // border-collapse: separate;
+                // border-spacing: 2px;
+                // border-color: gray;
+                border: 1px solid #000;
+                width:100%;
+                text-align: center;
+            }
+            tr{
+                border: 1px solid #000;
+                &:hover{
+                    background-color:gray;
+                }
+                td{
+                    border: 1px solid #000;
+                }
+            }
         }
     }
     .menu{
@@ -73,7 +94,7 @@ nav{
         top:101px;
         z-index:200;
         transition:.3s;
-        background:#f2f;
+        background:#fff;
         min-height:calc(100vh - 101px);
     }
 }
